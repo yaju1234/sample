@@ -1,0 +1,103 @@
+
+.toggleMenu {
+    display:  none;
+   /* background: #973414;*/
+    padding: 10px 15px;
+    color: #fff;
+    float: right;
+    background-color: #750000;
+    z-index: 12;
+    
+}
+.nav {
+    font-family: 'latobold', Arial, sans-serif;
+    font-size:12px;
+    list-style: none;
+     *zoom: 1;
+     /* background:rgba(151, 52, 20, 1); */
+}
+.nav:before,
+.nav:after {
+    content: " "; 
+    display: table; 
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+}
+.nav a {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform:uppercase;
+    color: #eb131a;
+}
+.nav > li > a:hover, .nav > li > a:focus {  }
+.nav li {
+    position: relative;
+}
+.nav > li {
+    float: left;
+}
+.nav > li > .parent {
+    background-image:url(../images/downArrow.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.nav > li > a {
+    display: block;
+}
+.nav li  ul {
+    position: absolute;
+    left: -9999px;
+    width:220px;
+}
+.nav > li.hover > ul {
+    left: 0;
+}
+.nav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+
+.nav li li a {
+    display: block;
+    background: #be3f16;
+    position: relative;
+    z-index:100;
+    text-transform:capitalize;
+    border-top: 1px solid #7e2a0e;
+    line-height:20px;
+}
+.nav li li a:hover, .nav > li.active{background-color:#fe6a04;}
+.nav li li li a {
+    background:#e04311;
+    z-index:200;
+    border-top: 1px solid #7e2a0e;
+}
+.nav li li li a:hover {background-color:#fe6a04;}
+@media screen and (max-width: 1023px) {
+    .active {
+        display: block;
+    }
+    .nav > li {
+        float: none;
+    }
+    .nav > li > .parent {
+        background-position: 95% 50%;
+    }
+    .nav li li .parent {
+        background-image:url(../images/downArrow.png);
+        background-repeat: no-repeat;
+            background-position: 95% 50%;
+    }
+    .nav ul {
+        display: block;
+        width: 100%;
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+
+}
